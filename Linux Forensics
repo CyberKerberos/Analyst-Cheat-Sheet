@@ -1,0 +1,12 @@
+Check the user related to brute force attack
+`sudo cat auth.log |grep "user"`
+Count the failed login attempts: 
+`sudo cat auth.log |grep -i "failed"|wc -l`
+What kind of system runs on the targeted server
+`cat /etc/issue.net`
+IP address successfully logged into the system
+`grep auth.log| grep Accepted | grep root | awk '{print $11}' | sort | uniq -c | sort -n`
+rules have been added to the firewall
+`grep -r ufw * | grep allow | awk '{print $NF}' | sort -u | uniq -c`
+downloaded files to the target system
+`dpkg.log`
