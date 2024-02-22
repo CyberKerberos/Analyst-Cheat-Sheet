@@ -1,3 +1,7 @@
 Clean all the data from Splunk: 
 
 C:\Program Files\Splunk\bin> .\splunk clean all
+
+Create user using rest: 
+
+.\splunk cmd splunkd rest --noauth POST /services/authentication/users "name=admin&password=<password>&roles=admin"
